@@ -1,0 +1,10 @@
+<input placeholder=" artist name .." [(ngModel)]='artist' />
+<input placeholder=" year .." [(ngModel)]='year' />
+<button (click)=search()>Search</button>
+<!-- <p>{{artist + ' ' + artist.length}}</p> -->
+
+<ul>
+  <li *ngFor="let fd of formData">
+    {{ fd.artist + " " + fd.year }}
+  </li>
+</ul>
