@@ -1,10 +1,26 @@
-<input placeholder=" artist name .." [(ngModel)]='artist' />
-<input placeholder=" year .." [(ngModel)]='year' />
+<input placeholder=" artist name .." [(ngModel)]='fd.artist' />
+<input placeholder=" year .." [(ngModel)]='fd.year' />
 <button (click)=search()>Search</button>
-<!-- <p>{{artist + ' ' + artist.length}}</p> -->
 
+
+<input type="radio" value="male" [(ngModel)]='fd.gender'> Male
+<input type="radio" value="female" [(ngModel)]='fd.gender'> Female
+<input type="radio" value="other" [(ngModel)]='fd.gender'> Other
+
+<hr>
+
+Recent Searches : 
 <ul>
   <li *ngFor="let fd of formData">
-    {{ fd.artist + " " + fd.year }}
+    {{ fd.artist + " " + fd.year + " " + fd.gender}}
+  </li>
+</ul>
+
+<hr>
+
+Recent Result : 
+<ul>
+  <li *ngFor="let track of tracks">
+    {{ track }}
   </li>
 </ul>
